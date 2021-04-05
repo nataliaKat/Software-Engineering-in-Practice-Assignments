@@ -107,9 +107,6 @@ public class HistogramGenerator {
 	public static void main(String[] args) {
 		HistogramGenerator hs = new HistogramGenerator();
 		double[] grades = hs.getGrades(args[0]);
-		for(double g : grades) {
-			System.out.println(g);
-		}
 		hs.generateChart(grades);
 	}
 
