@@ -6,6 +6,7 @@
   <packaging>pom</packaging>
   <name>Lab assignments</name>
   <description>These are lab assignments for Software Engineering in Practice</description>
+  
   <modules>
   	<module>gradeshistogram</module>
   </modules>

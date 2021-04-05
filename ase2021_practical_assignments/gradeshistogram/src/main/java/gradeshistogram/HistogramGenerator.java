@@ -1,6 +1,3 @@
-/**
- * 
- */
 package gradeshistogram;
 
 import java.io.File;
@@ -18,16 +15,18 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
 /**
+ * Creates a histogram based on an input file.
+ * 
  * @author Natalia Katsiapi
  *
  */
 public class HistogramGenerator {
 
 	/**
-	 * The method reads the grades from the file and returns them as an array of doubles. 
+	 * Reads the grades from the file and returns them as an array of doubles. 
 	 * 
 	 * @param filename
-	 * @return an array of doubles
+	 * @return gradesAsArray A double array of grades.
 	 */
 	public double[] getGrades(String filename) {
 		List<Double> grades = new ArrayList();
@@ -55,7 +54,7 @@ public class HistogramGenerator {
 		return gradesAsArray;
 	}
 	
-	/***
+	/**
 	 * Receives a single dimension Integer array. From this array the dataset
 	 * that will be used for the visualization is generated. Finally, The chart
 	 * is generated with the use of the aforementioned dataset and then
