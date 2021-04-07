@@ -79,6 +79,10 @@ public class HistogramGenerator {
 	}
 
 	public static void main(String[] args) {
+		if (args.length < 1) {
+			System.out.println("No file was given as an argument.");
+			return;
+		}
 		HistogramGenerator hs = new HistogramGenerator();
 		double[] grades = hs.getGrades(args[0]);
 		hs.generateChart(grades);
