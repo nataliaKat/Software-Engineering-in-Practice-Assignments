@@ -17,7 +17,7 @@ Requirements for the software and other tools to build.
 
 A step by step series of examples that tell you how to get the project running. First move to the project's directory.
 
-    cd gradeshistogram
+    cd ase2021_practical_assignments
 
 Then build the project using maven.
 
@@ -25,7 +25,7 @@ Then build the project using maven.
 
 ### Running
 
-After installation you should be able to run the project with:
+After installation you should be able to run the histogram generator with:
 
     java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar <grades-file>
 
@@ -34,3 +34,4 @@ where grades-file is a file that contains the grades in the following form:
     10
     9
     8.7
+    ...
