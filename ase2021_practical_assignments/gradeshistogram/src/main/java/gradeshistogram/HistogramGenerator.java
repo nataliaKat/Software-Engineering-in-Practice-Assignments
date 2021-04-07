@@ -69,7 +69,7 @@ public class HistogramGenerator {
 		
 		// This calculates the number of bins to be used which is the maximum grade + 1
 		int numberOfBins = (int) Arrays.stream(dataValues).max().orElse(-1) + 1;
-		dataset.addSeries("key", dataValues, numberOfBins);
+		dataset.addSeries("grade", dataValues, numberOfBins);
 
 		JFreeChart histogram = ChartFactory.createHistogram("Grades Histogram", "Grade", "Frequency", dataset);
 		ChartFrame frame = new ChartFrame("Grades", histogram);
