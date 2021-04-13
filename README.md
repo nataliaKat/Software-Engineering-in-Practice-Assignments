@@ -10,7 +10,7 @@ your local machine.
 ### Prerequisites
 
 Requirements for the software and other tools to build.
-- [JDK 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+- [JDK 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) (or higher)
 - [Maven](https://maven.apache.org/)
 
 ### Installing

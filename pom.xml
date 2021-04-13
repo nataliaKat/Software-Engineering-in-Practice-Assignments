@@ -4,9 +4,16 @@
   <artifactId>ase2021_practical_assignments</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+ 
   <name>Lab assignments</name>
   <description>These are lab assignments for Software Engineering in Practice</description>
-  
+
+ 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
   <modules>
   	<module>gradeshistogram</module>
   </modules>
