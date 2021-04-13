@@ -15,11 +15,7 @@ Requirements for the software and other tools to build.
 
 ### Installing
 
-A step by step series of examples that tell you how to get the project running. First move to the project's directory.
-
-    cd ase2021_practical_assignments
-
-Then build the project using maven.
+You can just build the project using Maven.
 
     mvn install
 
