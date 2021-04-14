@@ -16,3 +16,8 @@ buildNumber.properties
 .settings/
 .project
 .classpath
+
+#IntelliJ
+.idea/
+ase2021_practical_assignments.iml
+gradeshistogram/gradeshistogram.iml
