@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 /**
  * The ArithmeticOperationsTest provides testing methods for ArithmeticOperations.
  *
- * @author nkatsiapi
+ * @author Natalia Katsiapi
  */
 public class ArithmeticOperationsTest {
 
