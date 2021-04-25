@@ -1,14 +1,18 @@
-language: java # Define the language
+language: java
+
 jdk: # Define the execution environments
   - openjdk11
+  -
 sudo: required # Linux administrator permissions
+
 before_install:
   - sudo apt update # Update the package list
-install:
-  - sudo apt install maven –y # Install required packages
+
 before_script: # Run commands
   - ls -la
+
 script: # Build the project
   - mvn install
+
 after_success: # Notify users about the result
   - echo “Process terminated successfully”
