@@ -1,9 +1,12 @@
-# Software Engineering in Practice Assignments
+# Software Engineering in Practice Assignments 
+[![Build Status](https://travis-ci.com/nataliaKat/Software-Engineering-in-Practice-Assignments.svg?token=iY1fJBpUxUyzkKBhyQE6&branch=development)](https://travis-ci.com/nataliaKat/Software-Engineering-in-Practice-Assignments)
+
+## Description
 
 This project was developed as part of the 6th semester's <i>Software Engineering in Practice</i> course.
 It consists of 2 submodules:
  * [Grades Histogram](https://github.com/nataliaKat/Software-Engineering-in-Practice-Assignments/tree/main/gradeshistogram)
- * Unit Testing & Continuous Integration
+ * [Unit Testing & Continuous Integration](https://github.com/nataliaKat/Software-Engineering-in-Practice-Assignments/tree/development/unittesting)
 
 ## Getting Started
 
