@@ -61,13 +61,23 @@ public class ArithmeticOperationsTest {
     public ExpectedException thrown = ExpectedException.none();
 
     /**
-     * Tests multiply() with one negative int.
+     * Tests multiply() with x < 0.
      */
     @Test
-    public void testMultiplyOneNegative() {
+    public void testMultiplyXNegative() {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("x & y should be >= 0");
         arithmeticOperations.multiply(-5, 8);
+    }
+
+    /**
+     * Tests multiply() with y < 0.
+     */
+    @Test
+    public void testMultiplyYNegative() {
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("x & y should be >= 0");
+        arithmeticOperations.multiply(5, -8);
     }
 
     /**

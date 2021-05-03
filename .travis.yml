@@ -2,17 +2,20 @@ language: java
 
 jdk: # Define the execution environments
   - openjdk11
-  -
+
 sudo: required # Linux administrator permissions
 
 before_install:
   - sudo apt update # Update the package list
 
+install:
+  - sudo apt install maven –y
+
 before_script: # Run commands
   - ls -la
 
 script: # Build the project
-  - mvn install
+  - mvn clean package jacoco:report
 
 after_success: # Notify users about the result
   - echo “Process terminated successfully”
