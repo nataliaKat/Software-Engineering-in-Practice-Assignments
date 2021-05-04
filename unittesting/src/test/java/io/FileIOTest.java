@@ -10,7 +10,7 @@ import java.io.File;
 import static org.junit.Assert.*;
 
 /**
- * FileIOTest tests FileIO class
+ * FileIOTest tests FileIO class.
  *
  * @author Natalia Katsiapi
  */

@@ -1,7 +1,7 @@
 package math;
 
 /**
- * MyMath provides a method to calculate the factorial of a number
+ * MyMath provides some math functionality upon numbers
  * in order to familiarize with Unit Testing.
  *
  * @author Natalia Katsiapi
