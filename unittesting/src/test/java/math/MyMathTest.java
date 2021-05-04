@@ -27,7 +27,7 @@ public class MyMathTest {
     }
 
     /**
-     * Tests factorial for > 12 values.
+     * Tests factorial() for > 12 values.
      */
     @Test
     public void testFactorialThirteen() {
