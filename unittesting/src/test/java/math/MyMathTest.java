@@ -1,5 +1,6 @@
 package math;
 
+import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -34,6 +35,40 @@ public class MyMathTest {
         thrown.expect(IllegalArgumentException.class);
         thrown.expectMessage("n should be >= 0 and < 12");
         myMath.factorial(13);
+    }
+
+    /**
+     * Tests isPrime() with a prime argument(31).
+     */
+    @Test
+    public void testIsPrimeWithPrime() {
+        Assert.assertEquals(true, myMath.isPrime(31));
+    }
+
+    /**
+     * Tests isPrime() with a non prime argument(18).
+     */
+    @Test
+    public void testIsPrimeWithNonPrime() {
+        Assert.assertEquals(false, myMath.isPrime(18));
+    }
+
+    /**
+     * Tests isPrime() with a border argument(2).
+     */
+    @Test
+    public void testIsPrimeTwo() {
+        Assert.assertEquals(true, myMath.isPrime(2));
+    }
+
+    /**
+     * Tests isPrime() with an argument < 2 (1).
+     */
+    @Test
+    public void testIsPrimeLessThanTwo() {
+        thrown.expect(IllegalArgumentException.class);
+        thrown.expectMessage("n should be >= 2");
+        myMath.isPrime(1);
     }
 
 }
