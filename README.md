@@ -23,7 +23,10 @@ Requirements for the software and other tools to build.
 
 After cloning the project, you can build it using Maven.
 
-    mvn install
+    mvn clean install jacoco:report
+
+jacoco:report will create some HTML pages indicating each submodule's test coverage. It can be found in 
+<code>target/site/jacoco</code>.
 
 ## Running
 

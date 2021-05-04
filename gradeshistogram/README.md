@@ -2,7 +2,7 @@
 
 The aim of this project is to create a grades' histogram using [JFreeChart](https://www.jfree.org/jfreechart/) Java library.
 
-### Running
+## Running
 
 After installation you should be able to run the histogram generator with:
 
