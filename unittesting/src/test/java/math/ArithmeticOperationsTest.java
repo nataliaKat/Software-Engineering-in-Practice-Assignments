@@ -111,8 +111,7 @@ public class ArithmeticOperationsTest {
      */
     @Test
     public void testMultiplyyZero() {
-        thrown.expect(ArithmeticException.class);
-        arithmeticOperations.multiply(54, 0);
+        assertEquals(0, arithmeticOperations.multiply(9, 0));
     }
 
     /**
