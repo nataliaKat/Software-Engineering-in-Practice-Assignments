@@ -1,0 +1,18 @@
+language: java
+
+jdk: # Define the execution environments
+  - openjdk11
+
+sudo: required # Linux administrator permissions
+
+before_install:
+  - sudo apt update # Update the package list
+
+before_script: # Run commands
+  - ls -la
+
+script: # Build the project
+  - mvn clean install jacoco:report
+
+after_success: # Notify users about the result
+  - echo “Process terminated successfully”

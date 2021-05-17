@@ -1,6 +1,12 @@
-# Software Engineering in Practice Assignments
+# Software Engineering in Practice Assignments 
+[![Build Status](https://travis-ci.com/nataliaKat/Software-Engineering-in-Practice-Assignments.svg?token=iY1fJBpUxUyzkKBhyQE6&branch=development)](https://travis-ci.com/nataliaKat/Software-Engineering-in-Practice-Assignments)
 
-The aim of this project is to create a grades' histogram using [JFreeChart](https://www.jfree.org/jfreechart/) Java library.
+## Description
+
+This project was developed as part of the 6th semester's <i>Software Engineering in Practice</i> course.
+It consists of 2 submodules:
+ * [Grades Histogram](https://github.com/nataliaKat/Software-Engineering-in-Practice-Assignments/tree/main/gradeshistogram)
+ * [Unit Testing & Continuous Integration](https://github.com/nataliaKat/Software-Engineering-in-Practice-Assignments/tree/development/unittesting)
 
 ## Getting Started
 
@@ -15,19 +21,13 @@ Requirements for the software and other tools to build.
 
 ### Installing
 
-You can just build the project using Maven.
+After cloning the project, you can build it using Maven.
 
-    mvn install
+    mvn clean install jacoco:report
 
-### Running
+jacoco:report will create some HTML pages indicating each submodule's test coverage. It can be found in 
+<code>target/site/jacoco</code>.
 
-After installation you should be able to run the histogram generator with:
+## Running
 
-    java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar <grades-file>
-
-where grades-file is a file that contains the grades in the following form:
-
-    10
-    9
-    8.7
-    ...
+Instructions for running each submodule can be found in its module's README.md file.
