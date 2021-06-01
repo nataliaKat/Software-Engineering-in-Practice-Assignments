@@ -19,6 +19,4 @@ buildNumber.properties
 
 #IntelliJ
 .idea/
-ase2021_practical_assignments.iml
-gradeshistogram/gradeshistogram.iml
-unittesting/unittesting.iml
+*.iml

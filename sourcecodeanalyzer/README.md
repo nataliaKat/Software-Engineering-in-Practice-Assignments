@@ -1,4 +1,16 @@
-1. Build the executable Java application with: 
+# Source Code Analyzer
+The purpose of this project is to familiarize with design patterns.
+
+## Patterns Used
+
+### Strategy
+
+### Null Object
+
+### Factory
+
+## Execution
+1. Build the executable Java application with:
 	mvn package jacoco:report
 
 2. Run the executable by executing
