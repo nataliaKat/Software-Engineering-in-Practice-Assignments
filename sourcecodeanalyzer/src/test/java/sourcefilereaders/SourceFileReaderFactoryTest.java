@@ -6,49 +6,56 @@ import static org.junit.Assert.*;
 public class SourceFileReaderFactoryTest {
 
     SourceFileReaderFactory sourceFileReaderFactory = new SourceFileReaderFactory();
-
     SourceFileReadMethod sourceFileReadMethod;
+    private final static String FILEPATH = "somefilepath";
 
     @Test
-    public void testLocalList() {
-        sourceFileReadMethod = sourceFileReaderFactory.create("list", "local", "somefilepath");
+    public void testCreateLocalList() {
+        sourceFileReadMethod = sourceFileReaderFactory.create("list", "local", FILEPATH);
         assertTrue(sourceFileReadMethod instanceof SourceFileListReader);
         assertTrue(sourceFileReadMethod.getSourceFileLocation() instanceof LocalLocation);
     }
 
     @Test
-    public void testLocalString() {
-        sourceFileReadMethod = sourceFileReaderFactory.create("string", "local", "somefilepath");
+    public void testCreateLocalString() {
+        sourceFileReadMethod = sourceFileReaderFactory.create("string", "local", FILEPATH);
         assertTrue(sourceFileReadMethod instanceof SourceFileStringReader);
         assertTrue(sourceFileReadMethod.getSourceFileLocation() instanceof LocalLocation);
     }
 
     @Test
-    public void testWebList() {
-        sourceFileReadMethod = sourceFileReaderFactory.create("list", "web", "somefilepath");
+    public void testCreateWebList() {
+        sourceFileReadMethod = sourceFileReaderFactory.create("list", "web", FILEPATH);
         assertTrue(sourceFileReadMethod instanceof SourceFileListReader);
         assertTrue(sourceFileReadMethod.getSourceFileLocation() instanceof WebLocation);
     }
 
     @Test
-    public void testWebString() {
-        sourceFileReadMethod = sourceFileReaderFactory.create("string", "web", "somefilepath");
+    public void testCreateWebString() {
+        sourceFileReadMethod = sourceFileReaderFactory.create("string", "web", FILEPATH);
         assertTrue(sourceFileReadMethod instanceof SourceFileStringReader);
         assertTrue(sourceFileReadMethod.getSourceFileLocation() instanceof WebLocation);
     }
 
     @Test
-    public void testUnknownLocation() {
-        sourceFileReadMethod = sourceFileReaderFactory.create("string", "web2", "somefilepath");
+    public void testCreateUnknownLocation() {
+        sourceFileReadMethod = sourceFileReaderFactory.create("string", "web2", FILEPATH);
         assertTrue(sourceFileReadMethod instanceof SourceFileStringReader);
         assertTrue(sourceFileReadMethod.getSourceFileLocation() instanceof NullLocation);
     }
 
     @Test
-    public void testUnknownMethod() {
-        sourceFileReadMethod = sourceFileReaderFactory.create("t23gr4jhg43", "web", "somefilepath");
+    public void testCreateUnknownMethod() {
+        sourceFileReadMethod = sourceFileReaderFactory.create("t23gr4jhg43", "web", FILEPATH);
         assertTrue(sourceFileReadMethod instanceof SourceFileNullReader);
         assertTrue(sourceFileReadMethod.getSourceFileLocation() instanceof WebLocation);
+    }
+
+    @Test
+    public void testUnknownLocationAndMethod() {
+        sourceFileReadMethod = sourceFileReaderFactory.create("unknown", "unknown", FILEPATH);
+        assertTrue(sourceFileReadMethod instanceof SourceFileNullReader);
+        assertTrue(sourceFileReadMethod.getSourceFileLocation() instanceof NullLocation);
     }
 
 }

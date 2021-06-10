@@ -1,10 +1,12 @@
 package sourcecodeanalyzers;
 
-import sourcefilereaders.SourceFileReadMethod;
-
 public abstract class SourceCodeCalculator {
 
     protected AnalyzerType analyzerType;
+
+    public AnalyzerType getAnalyzerType() {
+        return analyzerType;
+    }
 
     public SourceCodeCalculator(AnalyzerType analyzerType) {
         this.analyzerType = analyzerType;

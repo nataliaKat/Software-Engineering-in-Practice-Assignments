@@ -1,7 +1,5 @@
 package sourcecodeanalyzers;
 
-import sourcefilereaders.*;
-
 import java.util.List;
 
 public class SourceCodeAnalyzerFactory {
