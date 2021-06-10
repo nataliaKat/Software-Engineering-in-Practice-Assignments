@@ -1,8 +1,7 @@
-package sourcefilereadmethod;
-
-import sourcefilelocation.SourceFileLocation;
+package sourcefilereaders;
 
 import java.io.IOException;
+import java.util.List;
 
 public class SourceFileListReader extends SourceFileReadMethod {
 
@@ -11,7 +10,9 @@ public class SourceFileListReader extends SourceFileReadMethod {
     }
 
     @Override
-    public void readFile() throws IOException {
-        sourceFileLocation.readFileIntoList(filePath);
+    public List<String> readFile() throws IOException {
+        List<String> res = sourceFileLocation.readFileIntoList(filePath);
+        System.out.println(res);
+        return res;
     }
 }

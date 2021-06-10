@@ -1,18 +1,20 @@
-package sourcefilelocation;
+package sourcefilereaders;
+
+import sourcefilereaders.SourceFileLocation;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LocalLocation implements SourceFileLocation {
+public class WebLocation implements SourceFileLocation {
     @Override
     public List<String> readFileIntoList(String filepath) throws IOException {
-        List<String> lines = new ArrayList();
-        File file = new File(filepath);
-        BufferedReader reader = new BufferedReader(new FileReader(file));
+        List<String> lines = new ArrayList<>();
+        URL url = new URL(filepath);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
         String line = null;
         while ((line = reader.readLine()) != null) {
             lines.add(line);
@@ -24,8 +26,8 @@ public class LocalLocation implements SourceFileLocation {
     @Override
     public String readFileIntoString(String filepath) throws IOException {
         StringBuilder sb = new StringBuilder();
-        File file = new File(filepath);
-        BufferedReader reader = new BufferedReader(new FileReader(file));
+        URL url = new URL(filepath);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
         String line = null;
         while ((line = reader.readLine()) != null) {
             sb.append(line + "\n");
