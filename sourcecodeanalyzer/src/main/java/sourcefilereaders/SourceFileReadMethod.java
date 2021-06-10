@@ -12,5 +12,9 @@ public abstract class SourceFileReadMethod {
         this.filePath = filePath;
     }
 
+    public SourceFileLocation getSourceFileLocation() {
+        return sourceFileLocation;
+    }
+
     public abstract <T> T readFile() throws IOException;
 }

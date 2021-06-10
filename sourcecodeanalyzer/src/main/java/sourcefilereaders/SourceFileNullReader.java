@@ -17,7 +17,7 @@ public class SourceFileNullReader extends SourceFileReadMethod {
      * Throws an exception for unknown read method.
      */
     @Override
-    public <T> T readFile() throws IOException {
+    public <T> T readFile() {
         throw new IllegalArgumentException("Unknown read method.");
     }
 }

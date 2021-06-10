@@ -1,5 +1,6 @@
 package sourcefilereaders;
 
+import codeanalyzer.SourceFileReader;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

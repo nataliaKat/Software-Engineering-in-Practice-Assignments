@@ -1,8 +1,6 @@
 package sourcefilereaders;
 
-
 import java.io.IOException;
-import java.util.List;
 
 public class SourceFileStringReader extends SourceFileReadMethod {
     public SourceFileStringReader(SourceFileLocation sourceFileLocation, String filePath) {

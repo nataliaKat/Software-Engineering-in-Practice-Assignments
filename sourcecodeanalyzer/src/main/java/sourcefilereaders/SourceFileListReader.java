@@ -12,7 +12,6 @@ public class SourceFileListReader extends SourceFileReadMethod {
     @Override
     public List<String> readFile() throws IOException {
         List<String> res = sourceFileLocation.readFileIntoList(filePath);
-        System.out.println(res);
         return res;
     }
 }

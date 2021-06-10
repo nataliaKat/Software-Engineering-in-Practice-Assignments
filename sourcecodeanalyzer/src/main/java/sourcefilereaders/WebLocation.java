@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WebLocation implements SourceFileLocation {
+
     @Override
     public List<String> readFileIntoList(String filepath) throws IOException {
         List<String> lines = new ArrayList<>();
@@ -35,4 +36,5 @@ public class WebLocation implements SourceFileLocation {
         reader.close();
         return sb.toString();
     }
+
 }
