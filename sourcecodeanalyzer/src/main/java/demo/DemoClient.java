@@ -1,11 +1,7 @@
 package demo;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import codeanalyzer.SourceCodeAnalyzer;
-import metricsexporters.*;
+import facades.CalculateAllMetricsFacade;
 
 public class DemoClient {
 
@@ -27,20 +23,9 @@ public class DemoClient {
 			System.exit(1);
 		}
 
-		SourceCodeAnalyzer analyzer = new SourceCodeAnalyzer(sourceFileLocation);
-		int loc = analyzer.calculateLOC(filepath, sourceCodeAnalyzerType);
-		int nom = analyzer.calculateNOM(filepath, sourceCodeAnalyzerType);
-		int noc = analyzer.calculateNOC(filepath, sourceCodeAnalyzerType);
-		
-		Map<String, Integer> metrics = new HashMap<>();
-		metrics.put("loc",loc);
-		metrics.put("nom",nom);
-		metrics.put("noc",noc);
-				
-		MetricsExporterFactory exporterFactory = new MetricsExporterFactory();
-		MetricsExporter metricsExporter = exporterFactory.createFileWriter(outputFileType);
-
-		metricsExporter.writeFile(metrics, outputFilePath);
+		CalculateAllMetricsFacade calculateAllMetricsFacade = new CalculateAllMetricsFacade();
+		calculateAllMetricsFacade.calculateAllMetrics(filepath, sourceCodeAnalyzerType,
+				sourceFileLocation, outputFilePath, outputFileType);
 	}
 
 }
