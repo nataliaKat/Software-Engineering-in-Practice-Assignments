@@ -1,7 +1,5 @@
 package sourcefilereaders;
 
-import java.io.IOException;
-
 /**
  * For the unknown read methods.
  *

@@ -1,7 +1,19 @@
 package sourcefilereaders;
 
+/**
+ * Creates an object of <code>SourceFileReadMethod</code> class
+ *
+ * @author Natalia Katsiapi
+ */
 public class SourceFileReaderFactory {
 
+    /**
+     * Get SourceFileReadMethod based on the given method and location.
+     * @param method either 'list' or 'string'
+     * @param location either 'local' or 'web'
+     * @param filepath the path of the file
+     * @return
+     */
     public SourceFileReadMethod create(String method, String location, String filepath) {
         SourceFileReadMethod sourceFileReadMethod;
         SourceFileLocation sourceFileLocation = getLocation(location);
@@ -21,6 +33,11 @@ public class SourceFileReaderFactory {
         return sourceFileReadMethod;
     }
 
+    /**
+     * Get SourceFileLocation based on the given string.
+     * @param location either 'local' or 'web'
+     * @return SourceFileLocation object
+     */
     private SourceFileLocation getLocation(String location) {
         SourceFileLocation sourceFileLocation;
         switch (location) {

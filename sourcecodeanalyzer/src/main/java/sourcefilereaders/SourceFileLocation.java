@@ -4,8 +4,9 @@ import java.io.IOException;
 import java.util.List;
 
 /**
+ * The read methods.
  *
- *
+ * @author Natalia Katsiapi
  */
 public interface SourceFileLocation {
 

@@ -1,7 +1,5 @@
 package sourcefilereaders;
 
-import sourcefilereaders.SourceFileLocation;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,8 +7,19 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Reads a web file as a string or list.
+ *
+ * @author Natalia Katsiapi
+ */
 public class WebLocation implements SourceFileLocation {
 
+    /**
+     * Reads the file's lines into a List.
+     * @param filepath the path of thw web file
+     * @return a List of the file lines as strings
+     * @throws IOException
+     */
     @Override
     public List<String> readFileIntoList(String filepath) throws IOException {
         List<String> lines = new ArrayList<>();
@@ -24,6 +33,12 @@ public class WebLocation implements SourceFileLocation {
         return lines;
     }
 
+    /**
+     * Reads the file as a String.
+     * @param filepath the path of thw web file
+     * @return a string containing the file
+     * @throws IOException
+     */
     @Override
     public String readFileIntoString(String filepath) throws IOException {
         StringBuilder sb = new StringBuilder();
