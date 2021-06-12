@@ -2,13 +2,26 @@ package sourcecodeanalyzers;
 
 import java.util.List;
 
+/**
+ * Calculates metrics according to the StringComparisonType.
+ *
+ * @author Natalia Katsiapi
+ */
 public class StringComparisonType implements AnalyzerType {
 
+    /**
+     * The source code to be examined as list.
+     */
     private List<String> sourceCode;
+
     public StringComparisonType(List<String> sourceCode) {
         this.sourceCode = sourceCode;
     }
 
+    /**
+     * Counts lines of code excluding comments or plain { or }.
+     * @return lines of code
+     */
     @Override
     public int calculateLOC() {
         int nonCodeLinesCounter = 0;
@@ -21,6 +34,10 @@ public class StringComparisonType implements AnalyzerType {
         return loc;
     }
 
+    /**
+     * Counts number of methods.
+     * @return number of methods
+     */
     @Override
     public int calculateNOM() {
         int methodCounter = 0;
@@ -34,6 +51,10 @@ public class StringComparisonType implements AnalyzerType {
         return methodCounter;
     }
 
+    /**
+     * Counts number of classes.
+     * @return number of classes
+     */
     @Override
     public int calculateNOC() {
         int classCounter = 0;

@@ -2,8 +2,20 @@ package sourcecodeanalyzers;
 
 import java.util.List;
 
+/**
+ * Creates an object of <code>SourceCodeCalculator</code> class
+ *
+ * @author Natalia Katsiapi
+ */
 public class SourceCodeAnalyzerFactory {
 
+    /**
+     * Get SourceCodeCalculator according to the type of metric and analyzing type given.
+     * @param calculator either 'loc' or 'noc' or 'nom'
+     * @param type either 'regex' or 'strcomp'
+     * @param sourceCode the source code as a list or string.
+     * @return SourceCodeCalculator object
+     */
     public SourceCodeCalculator create(String calculator, String type, Object sourceCode) {
         SourceCodeCalculator sourceCodeCalculator;
         AnalyzerType analyzerType = getType(type, sourceCode);
@@ -26,6 +38,13 @@ public class SourceCodeAnalyzerFactory {
         return sourceCodeCalculator;
     }
 
+    /**
+     * Get AnalyzerType according to given String. Regex needs source code as a list,
+     * while string composition as a string.
+     * @param type either 'regex' or 'strcomp'
+     * @param sourceCode the source code as a list or string.
+     * @return AnalyzerType object
+     */
     private AnalyzerType getType(String type, Object sourceCode) {
         AnalyzerType analyzerType;
         switch (type) {
