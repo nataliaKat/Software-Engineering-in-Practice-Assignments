@@ -15,4 +15,6 @@ script: # Build the project
   - mvn clean install jacoco:report
 
 after_success: # Notify users about the result
+  - java -jar sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar sourcecodeanalyzer/src/test/resources/TestClass.java strcomp local output csv
+  - diff expected-output.csv output.csv
   - echo “Process terminated successfully”
