@@ -8,8 +8,23 @@ import sourcefilereaders.SourceFileReaderFactory;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Reads the file and calculates a specific metric.
+ *
+ * @author Natalia Katsiapi
+ */
 public class ReadAndAnalyzeFacade {
 
+    /**
+     * Read the file into a list or string, based on whether the analyzer type is regex or string composition.
+     * Then, the metric is calculated.
+     * @param filepath the path of the source code file
+     * @param sourceCodeAnalyzerType either 'regex' or 'strcomp'
+     * @param sourceFileLocation either 'web' or 'local'
+     * @param metric either 'noc' or 'nom' or 'loc'
+     * @return the calculated metric
+     * @throws IOException
+     */
     public int getMetric(String filepath, String sourceCodeAnalyzerType, String sourceFileLocation, String metric) throws IOException {
         SourceCodeAnalyzerFactory sourceCodeAnalyzerFactory = new SourceCodeAnalyzerFactory();
         SourceFileReaderFactory sourceFileReaderFactory =  new SourceFileReaderFactory();
