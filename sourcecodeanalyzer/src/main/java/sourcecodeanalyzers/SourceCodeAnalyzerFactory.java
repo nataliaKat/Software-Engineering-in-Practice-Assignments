@@ -26,6 +26,7 @@ public class SourceCodeAnalyzerFactory {
                 break;
             case "noc":
                 sourceCodeCalculator = new NOCCalculator(analyzerType);
+
                 break;
             case "nom":
                 sourceCodeCalculator = new NOMCalculator(analyzerType);
@@ -40,7 +41,7 @@ public class SourceCodeAnalyzerFactory {
 
     /**
      * Get AnalyzerType according to given String. Regex needs source code as a list,
-     * while string composition as a string.
+     * while string comparison as a string.
      * @param type either 'regex' or 'strcomp'
      * @param sourceCode the source code as a list or string.
      * @return AnalyzerType object

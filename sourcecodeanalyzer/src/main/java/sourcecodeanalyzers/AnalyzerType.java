@@ -1,7 +1,7 @@
 package sourcecodeanalyzers;
 
 /**
- * The code analysis types
+ * The code analysis types.
  *
  * @author Natalia Katsiapi
  */

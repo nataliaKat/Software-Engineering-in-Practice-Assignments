@@ -16,7 +16,7 @@ import java.util.List;
 public class ReadAndAnalyzeFacade {
 
     /**
-     * Read the file into a list or string, based on whether the analyzer type is regex or string composition.
+     * Read the file into a list or string, based on whether the analyzer type is regex or string comparison.
      * Then, the metric is calculated.
      * @param filepath the path of the source code file
      * @param sourceCodeAnalyzerType either 'regex' or 'strcomp'

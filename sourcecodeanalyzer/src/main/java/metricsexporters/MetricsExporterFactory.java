@@ -8,6 +8,11 @@ package metricsexporters;
  */
 public class MetricsExporterFactory {
 
+    /**
+     * Creates the object based on the given string.
+     * @param outputType the object type to be created. Possible types: 'csv' and 'json'.
+     * @return an object of the corresponding class and NullExporter for unknown types.
+     */
     public MetricsExporter createFileWriter(String outputType) {
         MetricsExporter writer;
 

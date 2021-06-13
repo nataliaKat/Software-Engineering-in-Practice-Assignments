@@ -21,7 +21,7 @@ public abstract class SourceCodeCalculator {
     }
 
     /**
-     * Specifies which method to call from AnalyzerTypes.
+     * Specifies which method to call from AnalyzerType.
      * @return the calculated metric
      */
     public abstract int calculate();
