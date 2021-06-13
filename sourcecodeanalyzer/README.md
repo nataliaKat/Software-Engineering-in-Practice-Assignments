@@ -1,5 +1,6 @@
 # Source Code Analyzer
-The purpose of this project is to familiarize with design patterns.
+The purpose of this project is to familiarize with design patterns. It calculates 3 types of metrics: number of classes,
+number of methods and lines of code of a local or web file. 2 methods are supported: regex and string comparison.
 
 ## Patterns Used
 
