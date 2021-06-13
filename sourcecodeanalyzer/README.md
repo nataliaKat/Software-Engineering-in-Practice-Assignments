@@ -38,6 +38,10 @@ The first facade, <code>ReadAndAnalyzeFacade</code>, is made in order to hide co
 uses the first one and additionally hides the writers' complexity. So, the client only calls the second facade with the least possible parameters,
 without having to know the steps to use each class, similarly as with a library.  
 
+### Class Diagram
+It can also be found in the media directory.
+![class diagram](./media/Class Diagram.png)
+
 ## Execution
 1. Build the executable Java application with:
 	mvn package jacoco:report
