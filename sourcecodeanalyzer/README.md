@@ -59,6 +59,6 @@ It can also be found in the media directory. Colors represent different packages
 	- arg3 = “OutputFilePath” (e.g., ../output_metrics_file)
 	- arg4 = “OutputFileType” [csv|json]
 	
-	example:
-			
-		java –jar ./target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar ./src/test/resources/TestClass.java regex local metrics_results csv
+	example (run from project's root directory):
+   
+    	java -jar sourcecodeanalyzer/target/sourcecodeanalyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar sourcecodeanalyzer/src/test/resources/TestClass.java regex local metrics_results csv
