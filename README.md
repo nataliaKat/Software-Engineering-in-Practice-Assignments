@@ -7,6 +7,7 @@ This project was developed as part of the 6th semester's <i>Software Engineering
 It consists of 2 submodules:
  * [Grades Histogram](https://github.com/nataliaKat/Software-Engineering-in-Practice-Assignments/tree/main/gradeshistogram)
  * [Unit Testing & Continuous Integration](https://github.com/nataliaKat/Software-Engineering-in-Practice-Assignments/tree/development/unittesting)
+ * [Source Code Analyzer](https://github.com/nataliaKat/Software-Engineering-in-Practice-Assignments/tree/development/sourcecodeanalyzer)
 
 ## Getting Started
 
